@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  drone:
+    container_name: drone
+    image: drone/drone
+    environment:
+      DRONE_GITEA_SERVER: http://git.local.cc:3000
+      DRONE_GITEA_CLIENT_ID: 11bb0ae1-f89d-4579-89b2-6e240222566f
+      DRONE_GITEA_CLIENT_SECRET: M9MsvHtPu5k2hV80Q4h66buc4B-MlxxgChkNIFHigPo=
+      DRONE_RPC_SECRET: 8030801b6299170647a1803df825430a
+      DRONE_SERVER_HOST: drone.local.cc:3500
+      DRONE_SERVER_PROTO: http
+    volumes:
+      - ./data-drone:/data
+    ports:
+      - 3500:80
+  drone-runner:
+    container_name: drone-runner
+    image: drone/drone-runner-docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      DRONE_RPC_PROTO: http
+      DRONE_RPC_HOST: drone.local.cc:3500
+      DRONE_RPC_SECRET: 8030801b6299170647a1803df825430a
+      DRONE_RUNNER_CAPACITY: 2
+      DRONE_RUNNER_NAME: drone-runner.local
+    ports:
+      - 3501:3000
