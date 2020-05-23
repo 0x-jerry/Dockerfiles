@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  git-lab:
+    image: gitlab/gitlab-ce
+    hostname: git.local.cc
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        # comments
+        external_url 'http://git.local.cc'
+        gitlab_rails['gitlab_shell_ssh_port'] = 22
+    ports:
+      - "3600:80"
+      - "22:22"
+    volumes:
+      - "./data-gitlab/config:/etc/gitlab"
+      - "./data-gitlab/logs:/var/log/gitlab"
+      - "./data-gitlab/data:/var/opt/gitlab"

@@ -6,8 +6,8 @@ services:
     image: drone/drone
     environment:
       DRONE_GITEA_SERVER: http://git.local.cc:3000
-      DRONE_GITEA_CLIENT_ID: 11bb0ae1-f89d-4579-89b2-6e240222566f
-      DRONE_GITEA_CLIENT_SECRET: M9MsvHtPu5k2hV80Q4h66buc4B-MlxxgChkNIFHigPo=
+      DRONE_GITEA_CLIENT_ID: 9b47eff7-f2f2-48ba-9af2-d903033898c1
+      DRONE_GITEA_CLIENT_SECRET: Y9GUeRBtmjKSQv4Zg1cXogfpG8_Np6pX1N6Z8BYlFTM=
       DRONE_RPC_SECRET: 8030801b6299170647a1803df825430a
       DRONE_SERVER_HOST: drone.local.cc:3500
       DRONE_SERVER_PROTO: http
