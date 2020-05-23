@@ -15,7 +15,8 @@ services:
       - DB_NAME=gitea
       - DB_USER=gitea
       - DB_PASSWD=gitea
-    restart: always
+      - DOMAIN=git.local.cc
+      - SSH_DOMAIN=git.local.cc
     networks:
       - gitea
     volumes:
@@ -29,8 +30,7 @@ services:
       - db
 
   db:
-    image: mysql
-    restart: always
+    image: mysql:5.7
     environment:
       - MYSQL_ROOT_PASSWORD=gitea
       - MYSQL_USER=gitea
