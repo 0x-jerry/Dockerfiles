@@ -6,6 +6,6 @@ WORKDIR /app
 
 COPY BaiduPCS-Go /app
 
-VOLUME ["/root/Downloads"]
+VOLUME ["/root/Downloads", "/root/.config/BaiduPCS-Go"]
 
 CMD chmod +x ./BaiduPCS-Go && ./BaiduPCS-Go

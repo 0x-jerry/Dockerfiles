@@ -9,4 +9,5 @@ services:
       - 5299:5299
     volumes:
       - "./data-download:/root/Downloads"
+      - ./config:/root/.config/BaiduPCS-Go
     restart: unless-stopped
