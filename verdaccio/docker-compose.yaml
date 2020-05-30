@@ -3,7 +3,7 @@ services:
   verdaccio:
     build: .
     container_name: verdaccio
-    network_mode: host
+    network_mode: local_work
     environment: 
       - VERDACCIO_PORT=4873
       - VERDACCIO_PROTOCOL=http

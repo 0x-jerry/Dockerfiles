@@ -4,6 +4,7 @@ services:
   nginx:
     container_name: nginx
     image: nginx
+    network_mode: local_work
     volumes:
       # `ro` means read only
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
