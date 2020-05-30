@@ -4,5 +4,5 @@ EXPOSE 5299
 
 COPY BaiduPCS-Go /
 
-VOLUME ["/Downloads"]
+VOLUME ["/root/Downloads"]
 CMD  ["/BaiduPCS-Go"]

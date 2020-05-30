@@ -8,5 +8,5 @@ services:
     ports:
       - 5299:5299
     volumes:
-      - "./data-download:/Download"
+      - "./data-download:/root/Downloads"
     restart: unless-stopped
