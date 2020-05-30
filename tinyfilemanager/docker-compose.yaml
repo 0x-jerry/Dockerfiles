@@ -10,4 +10,4 @@ services:
     ports:
       - 4399:4399
     volumes:
-      - ../baidupcs/data-download:/app/folder
+      - ./data-share:/app/folder

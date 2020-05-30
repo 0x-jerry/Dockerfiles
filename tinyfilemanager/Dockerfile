@@ -4,7 +4,7 @@ WORKDIR /app
 
 EXPOSE $PORT
 
-COPY source /app
+COPY src /app
 
 VOLUME [ "/app/folder" ]
 
