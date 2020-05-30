@@ -2,7 +2,7 @@ version: "3"
 
 services:
   tinyfilemanager:
-    build: .
+    build: ./tinyfilemanager
     container_name: tinyfilemanager
     network_mode: local_work
     environment: 
