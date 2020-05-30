@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  baidu:
+    build: .
+    container_name: baidupcs
+    network_mode: local_work
+    ports:
+      - 5299:5299
+    volumes:
+      - "./data-download:/Download"
+    restart: unless-stopped
