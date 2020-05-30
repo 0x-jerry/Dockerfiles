@@ -1,11 +1,19 @@
-version: "2"
-
+version: "3"
 services:
   verdaccio:
+    build: .
     container_name: verdaccio
-    image: verdaccio/verdaccio
+    network_mode: host
+    environment: 
+      - VERDACCIO_PORT=4873
+      - VERDACCIO_PROTOCOL=http
     ports:
-      - "4873:4873"
+      - 4873:4873
     volumes:
       - "./data-storage:/verdaccio/storage"
       - "./conf:/verdaccio/conf"
+    restart: unless-stopped
+
+volumes:
+  verdaccio:
+    driver: local
