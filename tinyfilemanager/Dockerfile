@@ -1,7 +1,11 @@
 FROM arm32v7/php
 
+WORKDIR /app
+
 EXPOSE $PORT
 
-COPY source src
+COPY source /app
 
-CMD php -S 0.0.0.0:$PORT src/tinyfilemanager.php
+VOLUME [ "/app/folder" ]
+
+CMD php -S 0.0.0.0:$PORT tinyfilemanager.php

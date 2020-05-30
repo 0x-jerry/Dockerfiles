@@ -9,5 +9,5 @@ services:
       PORT: 4399
     ports:
       - 4399:4399
-    # volumes:
-    #   - "./data-storage:/verdaccio/storage"
+    volumes:
+      - ../baidupcs/data-download:/app/folder
