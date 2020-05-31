@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  aria2-ui:
+    image: wahyd4/aria2-ui:arm32
+    container_name: aria2
+    network_mode: local_work
+    environment:
+      - ENABLE_AUTH=true
+      - ARIA2_USER=hello
+      - ARIA2_PWD=world
+      - DOMAIN=http://aria2.local.cc
+    ports:
+      - "6655:80"
+    volumes:
+      - /mnt/gem:/data/gem
+      - ./data-download:/data

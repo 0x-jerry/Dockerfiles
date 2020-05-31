@@ -10,4 +10,4 @@ services:
     ports:
       - 4399:4399
     volumes:
-      - ./data-share:/app/folder
+      - /mnt/gem:/app/gem
