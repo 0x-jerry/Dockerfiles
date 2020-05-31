@@ -1,7 +1,5 @@
 version: "3"
 
-user: pi:pi
-
 services:
   baidu:
     build: ./baidupcs
@@ -12,4 +10,3 @@ services:
     volumes:
       - "./data-download:/root/Downloads"
       - ./config:/root/.config/BaiduPCS-Go
-    restart: unless-stopped
