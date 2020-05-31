@@ -2,7 +2,7 @@ version: '3'
 
 services:
   swirl:
-    image: swirl_swirl
+    image: local/swirl
     container_name: swirl
     network_mode: local_work
     environment:
