@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  tinyfilemanager:
+    build: ./tinyfilemanager
+    container_name: tinyfilemanager
+    network_mode: local_work
+    environment: 
+      PORT: 4399
+    ports:
+      - 4399:4399
+    volumes:
+      - ./data-share:/app/folder
