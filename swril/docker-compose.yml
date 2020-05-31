@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  swirl:
+    build: ./swirl
+    container_name: swirl
+    environment:
+      DB_TYPE: bolt
+      DB_ADDRESS: /data/swir
+    volumes:
+      - ./data-swirl:/data/swirl
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 5566:8001
+    # deploy:
+    #   replicas: 1
+    #   placement:
+    #     constraints: [node.role == manager]
