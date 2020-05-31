@@ -2,13 +2,14 @@ version: '3'
 
 services:
   swirl:
-    build: ./swirl
+    image: swirl_swirl
     container_name: swirl
+    network_mode: local_work
     environment:
       DB_TYPE: bolt
       DB_ADDRESS: /data/swir
     volumes:
-      - ./data-swirl:/data/swirl
+      - ./data-swirl:/data/swir
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 5566:8001
