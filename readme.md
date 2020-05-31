@@ -15,4 +15,6 @@ docker network create local_work
 - [x] baidu.local.cc (5299)
 - [x] file.local.cc (4399)
 - [x] npm.local.cc (4873)
+- [x] swirl.local.cc (8001)
+- [x] netdata.local.cc (19999)
 - [ ] git.local.cc ()
