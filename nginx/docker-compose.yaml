@@ -1,5 +1,7 @@
 version: "3"
 
+user: pi:pi
+
 services:
   nginx:
     container_name: nginx
