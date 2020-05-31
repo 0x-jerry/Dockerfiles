@@ -2,7 +2,7 @@ version: "3"
 
 services:
   baidu:
-    build: ./baidupcs
+    image: local/baidupcs
     container_name: baidupcs
     network_mode: local_work
     ports:
