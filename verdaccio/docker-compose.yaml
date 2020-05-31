@@ -2,7 +2,7 @@ version: "3"
 
 services:
   verdaccio:
-    build: .
+    image: local/verdaccio
     container_name: verdaccio
     network_mode: local_work
     environment: 

@@ -1,0 +1,3 @@
+[submodule "build/swirl"]
+	path = build/swirl
+	url = https://github.com/cwxyz007/swirl.git
