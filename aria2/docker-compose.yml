@@ -13,5 +13,5 @@ services:
     ports:
       - "6655:80"
     volumes:
-      - /mnt/gem:/data/gem
+      - /media/pi/gem:/data/gem
       - ./data-download:/data
