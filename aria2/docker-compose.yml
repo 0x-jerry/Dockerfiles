@@ -5,6 +5,7 @@ services:
     image: wahyd4/aria2-ui:arm32
     container_name: aria2
     network_mode: local_work
+    restart: unless-stopped
     environment:
       - ENABLE_AUTH=true
       - ARIA2_USER=hello

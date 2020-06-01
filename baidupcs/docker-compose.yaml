@@ -5,6 +5,7 @@ services:
     image: local/baidupcs
     container_name: baidupcs
     network_mode: local_work
+    restart: unless-stopped
     ports:
       - 5299:5299
     volumes:

@@ -4,6 +4,7 @@ services:
     network_mode: local_work
     image: netdata/netdata
     container_name: netdata
+    restart: unless-stopped
     # set to fqdn of host
     hostname: monitor.local.cc 
     ports:
