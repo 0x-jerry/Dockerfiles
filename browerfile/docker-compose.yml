@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  verdaccio:
+    image: filebrowser/filebrowser:pi
+    container_name: filebrowser
+    network_mode: local_work
+    # environment: 
+    #   - VERDACCIO_PORT=4873
+    #   - VERDACCIO_PROTOCOL=http
+    ports:
+      - 6655:80
+    volumes:
+      - /media/pi/gem:/srv/gem
+    restart: unless-stopped
