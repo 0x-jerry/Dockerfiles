@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  verdaccio:
-    image: fbrowser
+  filebrowser:
+    image: cwxyz/fbrowser
     container_name: filebrowser
     network_mode: local_work
     ports:
