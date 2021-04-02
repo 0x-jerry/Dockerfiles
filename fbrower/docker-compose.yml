@@ -2,8 +2,8 @@ version: "3"
 
 services:
   filebrowser:
-    image: cwxyz/fbrowser
-    container_name: filebrowser
+    image: cwxyz/filebrowser
+    container_name: fbrowser
     network_mode: local_work
     ports:
       - 6655:3000

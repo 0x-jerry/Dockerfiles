@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:v2-pi
+    container_name: filebrowser
+    network_mode: local_work
+    # expose: 
+    #   - 80
+    ports:
+      - 3000:80
+    expose: 
+      - 3000
+    volumes:
+      - /media/pi/gem:/srv
+    restart: unless-stopped
