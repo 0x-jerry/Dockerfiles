@@ -16,12 +16,14 @@ services:
       ROOT_URL: git.local.cc:3300
     volumes:
       - ./data-gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
     ports:
       - "3300:3000"
       - "3322:22"
 
   db:
-    image: postgres:9
+    image: postgres:13
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: adminroot
