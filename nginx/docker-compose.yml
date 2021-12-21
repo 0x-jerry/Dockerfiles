@@ -2,8 +2,8 @@ version: "3"
 
 services:
   nginx:
-    container_name: nginx:1
-    image: nginx
+    container_name: nginx
+    image: nginx:1
     network_mode: local_work
     restart: unless-stopped
     volumes:
