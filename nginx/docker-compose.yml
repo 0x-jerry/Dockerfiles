@@ -5,7 +5,6 @@ services:
     container_name: nginx
     image: nginx:1
     network_mode: local_work
-    restart: unless-stopped
     volumes:
       # `ro` means read only
       - ./conf:/etc/nginx/conf.d:ro

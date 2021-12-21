@@ -1,4 +1,4 @@
-version: "3"
+version: "3.2"
 
 services:
   filebrowser:
@@ -13,4 +13,5 @@ services:
       - 3000
     volumes:
       - /media/pi/gem:/srv
-    restart: unless-stopped
+      - ./.filebrowser.json:/.filebrowser.json
+      - ./data/database.db:/database.db
