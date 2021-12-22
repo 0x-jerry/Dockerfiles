@@ -1,6 +1,6 @@
 {
   "port": 80,
-  "baseURL": "",
+  "baseURL": "http://filebrowser.local.cc",
   "address": "",
   "log": "stdout",
   "database": "/database.db",
