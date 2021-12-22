@@ -1,7 +1,7 @@
 {
+  "baseURL": "",
   "port": 80,
-  "baseURL": "http://filebrowser.local.cc",
-  "address": "",
+  "address": "0.0.0.0",
   "log": "stdout",
   "database": "/database/database.db",
   "root": "/srv"
