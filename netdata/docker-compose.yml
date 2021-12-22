@@ -1,12 +1,18 @@
-version: '3'
+version: "3.6"
+
+networks:
+  nginx:
+    external: true
+
 services:
   netdata:
-    network_mode: local_work
     image: netdata/netdata
-    container_name: netdata
+    networks:
+      - nginx
+
     restart: unless-stopped
     # set to fqdn of host
-    hostname: monitor.local.cc 
+    hostname: monitor.local.cc
     ports:
       - 19999:19999
     cap_add:

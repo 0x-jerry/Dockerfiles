@@ -1,10 +1,14 @@
-version: "3"
+version: "3.6"
+
+networks:
+  nginx:
+    name: nginx
 
 services:
   nginx:
-    restart: unless-stopped
     image: nginx:1
-    network_mode: local_work
+    networks:
+      - nginx
     volumes:
       # `ro` means read only
       - ./conf:/etc/nginx/conf.d

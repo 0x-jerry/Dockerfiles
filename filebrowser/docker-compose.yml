@@ -1,13 +1,18 @@
-version: "3.2"
+version: "3.6"
+
+networks:
+  nginx:
+    external: true
 
 services:
   filebrowser:
     image: filebrowser/filebrowser:v2
     restart: unless-stopped
-    network_mode: local_work
+    networks:
+      - nginx
     ports:
       - 3000:80
     volumes:
       - /media/pi/gem:/srv
       - ./.filebrowser.json:/.filebrowser.json
-      - ./data/database.db:/database.db
+      - ./data:/database

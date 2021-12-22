@@ -3,6 +3,6 @@
   "baseURL": "http://filebrowser.local.cc",
   "address": "",
   "log": "stdout",
-  "database": "/database.db",
+  "database": "/database/database.db",
   "root": "/srv"
 }
